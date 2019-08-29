@@ -2,24 +2,26 @@ console.log('tamagotchi file is loaded');
 
 //your class declaration here
 class Tamagotchi {
-    constructor() {
+    constructor(name = 'Tamagotchi', creatureType = 'cry') {
+        this.name = name;
+        this.creatureType = creatureType;
         this.foodInTummy = 10;
-         this.restedness = 10; 
-         this.health = 10
-         
-}
+        this.restedness = 10;
+        this.health = 10
+        console.log(`constructor: name: ${this.name}, creatureTupe: ${this.creatureType}`)
 
-cry(){
-this.foodInTummy--;
-console.log('new food in tummy:' + this.foodInTummy);
-console.log("WAHH!!!")
+    }
+    cry() {
+        this.foodInTummy--;
+        console.log('new food in tummy:' + this.foodInTummy);
+        console.log("WAHH!!!")
 
-}
+    }
 }
 
 //create new Tamagotchis
-var constructedObject1 = new Tamagotchi()
-var constructedObject2 = new Tamagotchi();
+let constructedObject1 = new Tamagotchi('bob', 'cry')
+let constructedObject2 = new Tamagotchi('joe', 'play');
 
 //console log the new Objects to check them out
 console.log(constructedObject1);
